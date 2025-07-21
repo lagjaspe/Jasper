@@ -39,7 +39,7 @@ def configure_api():
         
         # Test the API key
         genai.configure(api_key=api_key)
-        model = genai.GenerativeModel('gemini:gemini-2.5-flash')
+        model = genai.GenerativeModel('gemini-2.5-flash')
         
         # Test with a simple prompt
         response = model.generate_content("Hello")
@@ -69,7 +69,7 @@ def chat():
         
         # Configure Gemini
         genai.configure(api_key=api_key)
-        model = genai.GenerativeModel('gemini:gemini-2.5-flash')
+        model = genai.GenerativeModel('gemini-2.5-flash')
         
         # Generate response
         response = model.generate_content(message)
@@ -101,7 +101,7 @@ def generate_code():
         
         # Configure Gemini
         genai.configure(api_key=api_key)
-        model = genai.GenerativeModel('gemini:gemini-2.5-flash')
+        model = genai.GenerativeModel('gemini-2.5-flash')
         
         # Create structured prompt for code generation
         structured_prompt = f"""
